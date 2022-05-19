@@ -65,7 +65,7 @@ function createParticle() {
 
 function setup() {
 
-createCanvas(1400, 800);
+createCanvas(1200, 700);
 
   for(var i=0; i < nParticles ; i++) {
 particles.push(createParticle());
@@ -97,29 +97,6 @@ function draw() {
   }
 }
 
-
-
-
-  carrier = new p5.Oscillator(); // connects to master output by default
-  carrier.freq(100);
-  carrier.amp(0);
-  // carrier's amp is 0 by default, giving our modulator total control
-
-  carrier.start();
-
-  modulator = new p5.Oscillator('triangle');
-  modulator.disconnect(); // disconnect the modulator from master output
-  modulator.freq(3);
-  modulator.amp(1);
-  modulator.start();
-
-  // Modulate the carrier's amplitude with the modulator
-  // Optionally, we can scale the signal.
-  carrier.amp(modulator.scale(-1, 1, 1, -1));
-
-  // create an fft to analyze the audio
-  fft = new p5.FFT();
-
   function mousePressed() {
-    saveFrames('mycelium1', 'png', 1, 1)
+    saveFrames('mycelium', 'png', 1, 1)
     }
