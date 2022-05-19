@@ -1,7 +1,7 @@
-var nParticles = 50;
+var nParticles = 30;
 var particles = [];
 var particleSize = 80;
-var maxCounter= 50;
+var maxCounter= 40;
 var lines = [];
 
 
